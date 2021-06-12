@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> Family book </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <center>
+        <h4 id="family_member_name"> </h4>
+        <img src="https://compass-ssl.microsoft.com/assets/fe/5b/fe5b766b-2852-4866-8dcb-fc93763fad6e.png?n=FamilyHeroAnim2_poster_trimmed.png" style="width: 30%;"
+         id="family_member_image">
+         <button onclick="update();"> Next </button>
+         <h1> My Family Book</h1>
+        </center>
+        <script>
+
+           
+
+            var images = ["https://cdn2.vectorstock.com/i/1000x1000/70/61/dark-skinned-mother-and-baby-vector-23827061.jpg", 
+            "https://image.shutterstock.com/z/stock-vector-cartoon-illustration-of-a-single-young-father-with-his-cute-children-178049600.jpg", 
+            "https://static.toiimg.com/photo/msid-65910936/65910936.jpg?249901" ];
+
+            var names = [ "Suchitra : mother", "Abhijit : father", "Anika : daughter"];
+
+            var i = 0;
+            function update()
+            {
+                i++
+                var numbers_of_family_member_in_array = 2;
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedimage = images[i];
+                var unpdatedname = names[i];
+                document.getElementById("family_member_image").src = updatedimage;
+                document.getElementById("family_member_name").innerHTML = unpdatedname;
+
+            }
+        
+            </script>
+
+
+    </body>
+
+
+
+
+
+</html>
